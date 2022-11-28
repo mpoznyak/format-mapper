@@ -2,9 +2,9 @@
 ### Provide some mapping and let the converter do the rest
 
 Supported mappings (WIP):
-- [x] xls -> json
-- [ ] json -> xls
-- [ ] csv -> json
+- [x] xls to json
+- [ ] json to xls
+- [ ] csv to json
 - [ ] ...
 
 Example:
