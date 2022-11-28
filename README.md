@@ -9,13 +9,19 @@ Supported mappings (WIP):
 
 Example:
 ```shell  
-./format-mapper -f ./Book1.xlsx -s Sheet1 -m 1:repository,2:language -i id -g autoincrement -n 1 -t
+./format-mapper -f ./Book1.xlsx -s Sheet1 -m 0:repository,1:language -i id -g autoincrement -t
 ```  
 
-This command converts Sheet1 of xls file with data  
+This command converts xls data:  
 | repository | language |  
 | --- | --- |  
 | format-mapper | rust |
+
+to json file with the following content:
+```json
+[{"id":"1","repository" : "repository","language" : "language"},
+  {"id":"2","repository" : "format-mapper","language" : "rust"}]
+```
 
 
 ```text
