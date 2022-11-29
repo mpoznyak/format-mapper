@@ -1,5 +1,5 @@
 ## Format Mapper
-### Provide some mapping and let the converter do the rest
+#### Map data from one format to another one providing custom mapping (column -> field, etc.). Supported formats: xls, json, csv (WIP).
 
 Supported mappings (WIP):
 - [x] xls to json
