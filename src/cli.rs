@@ -33,7 +33,11 @@ pub struct Cli {
 
     /// id generator, required if id flag is specified
     #[arg(value_enum, short='g', long="igen")]
-    pub id_generator: Option<IdGeneratorType>
+    pub id_generator: Option<IdGeneratorType>,
+
+    /// process new line symbols
+    #[arg(value_enum, short='l', long="newline", default_value_t=NewLineReplacingType::Ignore)]
+    pub newline_replacing: NewLineReplacingType
 }
 
 #[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Debug, ValueEnum)]
@@ -42,4 +46,14 @@ pub enum IdGeneratorType {
     Autoincrement,
     ///Generate UUID for each id field
     Uuid,
+}
+
+#[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Debug, ValueEnum)]
+pub enum NewLineReplacingType {
+    /// ignore (default
+    Ignore,
+    ///replace new line symbol with blank string
+    Blank,
+    //replace new line symbol with whitespace
+    Whitespace
 }

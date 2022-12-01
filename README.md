@@ -35,6 +35,7 @@ Options:
   -t, --trim                       trim whitespaces after parsing - default true
   -i, --id <ID>                    append id field with a specified name
   -g, --igen <ID_GENERATOR>        id generator, required if id flag is specified [possible values: autoincrement, uuid]
+  -l, --newline <NEWLINE_REPLACING>  process new line symbols [default: ignore] [possible values: ignore, blank, whitespace]
   -h, --help                       Print help information (use `--help` for more detail)
   -V, --version                    Print version information
 ```

@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use std::env::Args;
 use crate::Cli;
-use crate::cli::IdGeneratorType;
+use crate::cli::{IdGeneratorType, NewLineReplacingType};
 
 pub struct Config {
     pub file: String,
@@ -10,7 +10,8 @@ pub struct Config {
     pub not_include: usize,
     pub trim: bool,
     pub id: Option<String>,
-    pub id_generator: Option<IdGeneratorType>
+    pub id_generator: Option<IdGeneratorType>,
+    pub new_line: NewLineReplacingType
 }
 
 impl Config {
@@ -25,7 +26,8 @@ impl Config {
                 None => 0
             },
             id: cli.id,
-            id_generator: cli.id_generator
+            id_generator: cli.id_generator,
+            new_line: cli.newline_replacing
         }
     }
 }
