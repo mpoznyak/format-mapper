@@ -38,7 +38,8 @@ fn xls_to_json() {
                        config.not_include,
                        config.trim,
                        config.id.as_ref(),
-                        config.id_generator.as_ref()).unwrap()
+                       config.id_generator.as_ref(),
+                       config.new_line).unwrap()
 }
 
 fn validate(path_buf: &PathBuf) {
